@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://127.0.0.1:5000/api";
+const API_BASE_URL = "https://datastraw-support-crm-2.onrender.com/api";
 
 export async function getTickets(search = "", status = "All") {
   let url = `${API_BASE_URL}/tickets?`;
