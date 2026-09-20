@@ -422,7 +422,7 @@ Possible future enhancements include:
 
 # 👩‍💻 Author
 
-## Shridhanya S.
+## Shridhanya
 
 **B.E. Computer Science Engineering**
 
