@@ -1,516 +1,446 @@
-\# Datastraw Support CRM
+# 🎫 Datastraw Support CRM
 
+### A modern full-stack customer support ticket management system
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-black?style=for-the-badge&logo=vercel)](https://datastraw-support-crm-delta.vercel.app/)
+[![Backend](https://img.shields.io/badge/API-Render-46E3B7?style=for-the-badge&logo=render)](https://datastraw-support-crm-2.onrender.com/)
+[![Database](https://img.shields.io/badge/Database-Supabase-3ECF8E?style=for-the-badge&logo=supabase)](https://supabase.com/)
+[![GitHub](https://img.shields.io/badge/Source%20Code-GitHub-181717?style=for-the-badge&logo=github)](https://github.com/Shridhanya77/datastraw_support_crm)
 
-A full-stack customer support ticket management system built with \*\*React.js, Flask, and PostgreSQL\*\*. The application allows support teams to create, manage, search, filter, update, add notes to, and delete customer support tickets.
+> A full-stack Support CRM application built with **React.js, Flask, PostgreSQL and REST APIs**, designed to help support teams create, manage, search and track customer support tickets efficiently.
 
+---
 
+## 🌐 Live Application
 
-\## 🚀 Live Demo
+### 🚀 Try the application
 
-
-
-\*\*Frontend:\*\*  
-
+**Frontend:**  
 https://datastraw-support-crm-delta.vercel.app/
 
-
-
-\*\*Backend API:\*\*  
-
+**Backend API:**  
 https://datastraw-support-crm-2.onrender.com/
 
+**Source Code:**  
+https://github.com/Shridhanya77/datastraw_support_crm
 
+---
 
-\## 📸 Application Preview
+# 📸 Application Preview
 
+## 🖥️ Dashboard
 
+The dashboard provides an overview of support tickets with statistics, search, status filtering and ticket management.
 
-\### Dashboard
+<img src="./Screenshots/dashboard.png" alt="Datastraw Support CRM Dashboard" width="100%">
 
+---
 
+## ➕ Create Ticket
 
-!\[Datastraw Support CRM Dashboard](Screenshots/dashboard.png)
+Support agents can create new customer tickets with customer information, issue title and detailed description.
 
+<img src="./Screenshots/create-ticket.png" alt="Create Support Ticket" width="100%">
 
+---
 
-\### Create Ticket
+## 🎫 Ticket Details
 
+Each ticket has a dedicated details view where support agents can review the issue, update its status and add internal notes.
 
+<img src="./Screenshots/ticket-details.png" alt="Ticket Details" width="100%">
 
-!\[Creating a Ticket Form](Screenshots/create\_ticket.png)
+---
 
+# ✨ Key Features
 
+| Feature | Description |
+|---|---|
+| 🎫 **Ticket Management** | Create, view, update and delete support tickets |
+| 🆔 **Auto Ticket IDs** | Automatically generates unique IDs such as `TKT-001` |
+| 🔎 **Smart Search** | Search by customer name, email, ticket ID, subject or description |
+| 🏷️ **Status Filtering** | Filter tickets by Open, In Progress or Closed |
+| 📝 **Ticket Notes** | Add notes/comments to individual tickets |
+| 📊 **Dashboard Statistics** | View total, open, in-progress and closed ticket counts |
+| 🔄 **Status Updates** | Change ticket status directly from the ticket details page |
+| 🗄️ **PostgreSQL Database** | Persistent cloud database using Supabase |
+| 🌍 **Cloud Deployment** | Frontend and backend deployed separately |
+| 📱 **Responsive UI** | Clean interface designed for different screen sizes |
 
-\### Ticket Details
+---
 
-
-
-!\[Ticket Details](Screenshots/ticket\_details.png)
-
-
-
-
-
-\## 📌 Features
-
-
-
-\- Create customer support tickets
-
-\- View detailed ticket information
-
-\- Update ticket status
-
-&#x20; - Open
-
-&#x20; - In Progress
-
-&#x20; - Closed
-
-\- Add notes to tickets
-
-\- Search tickets by customer, ticket ID, email, subject, or description
-
-\- Filter tickets by status
-
-\- Delete tickets
-
-\- Dashboard with ticket statistics
-
-\- Persistent PostgreSQL database
-
-\- REST API architecture
-
-\- Responsive React frontend
-
-\- Production deployment
-
-
-
-\## 🛠️ Technology Stack
-
-
-
-\### Frontend
-
-\- React.js
-
-\- Vite
-
-\- JavaScript
-
-\- Tailwind CSS
-
-
-
-\### Backend
-
-\- Python
-
-\- Flask
-
-\- Flask-CORS
-
-\- Gunicorn
-
-\- REST APIs
-
-
-
-\### Database
-
-\- PostgreSQL
-
-\- Supabase
-
-
-
-\### Development \& Deployment
-
-\- Git
-
-\- GitHub
-
-\- Vercel
-
-\- Render
-
-
-
-\## 🏗️ System Architecture
-
-
+# 🏗️ System Architecture
 
 ```text
-
-┌─────────────────────────┐
-
-│       React Frontend    │
-
-│      Vite + Tailwind    │
-
-└────────────┬────────────┘
-
-&#x20;            │
-
-&#x20;            │ REST API
-
-&#x20;            ▼
-
-┌─────────────────────────┐
-
-│      Flask Backend      │
-
-│      Python + API       │
-
-└────────────┬────────────┘
-
-&#x20;            │
-
-&#x20;            │ PostgreSQL
-
-&#x20;            ▼
-
-┌─────────────────────────┐
-
-│   Supabase PostgreSQL   │
-
-│     Tickets + Notes     │
-
-└─────────────────────────┘
+                    ┌──────────────────────┐
+                    │     React Frontend   │
+                    │      Vite + JS       │
+                    └──────────┬───────────┘
+                               │
+                               │ REST API
+                               ▼
+                    ┌──────────────────────┐
+                    │    Flask Backend     │
+                    │   Python + CORS      │
+                    └──────────┬───────────┘
+                               │
+                               │ SQL
+                               ▼
+                    ┌──────────────────────┐
+                    │ PostgreSQL Database  │
+                    │       Supabase       │
+                    └──────────────────────┘
 
 
+        Deployment
 
-Frontend → Vercel
-
-Backend  → Render
-
-Database → Supabase
-
+        React Frontend  ───────► Vercel
+        Flask Backend   ───────► Render
+        PostgreSQL      ───────► Supabase
 ```
 
+---
 
+# 🛠️ Technology Stack
 
-\## 📂 Project Structure
+### Frontend
 
+![React](https://img.shields.io/badge/React.js-19-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-8-646CFF?style=flat-square&logo=vite&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![Tailwind](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 
+- React.js
+- Vite
+- JavaScript
+- Tailwind CSS
+- Fetch API
 
-```text
+### Backend
 
-datastraw\_support\_crm/
+![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=flat-square&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-REST_API-000000?style=flat-square&logo=flask&logoColor=white)
 
-│
+- Python
+- Flask
+- Flask-CORS
+- Gunicorn
+- REST APIs
 
-├── backend/
+### Database
 
-│   ├── app.py
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-Cloud_DB-3ECF8E?style=flat-square&logo=supabase&logoColor=white)
 
-│   ├── database.py
+- PostgreSQL
+- Supabase
+- Relational database design
 
-│   ├── requirements.txt
+### Deployment & Tools
 
-│   └── ...
+- Git
+- GitHub
+- Vercel
+- Render
+- Supabase
+- VS Code
+- Postman
 
-│
+---
 
-├── frontend/
+# 🔌 REST API
 
-│   ├── src/
+| Method | Endpoint | Purpose |
+|:---:|---|---|
+| `GET` | `/api/tickets` | Retrieve all tickets |
+| `GET` | `/api/tickets/<ticket_id>` | Retrieve ticket details and notes |
+| `POST` | `/api/tickets` | Create a new ticket |
+| `PUT` | `/api/tickets/<ticket_id>` | Update status and add notes |
+| `DELETE` | `/api/tickets/<ticket_id>` | Delete a ticket |
 
-│   │   ├── components/
-
-│   │   ├── services/
-
-│   │   ├── App.jsx
-
-│   │   └── ...
-
-│   ├── package.json
-
-│   └── ...
-
-│
-
-└── README.md
-
-```
-
-
-
-\## 🔌 API Endpoints
-
-
-
-\### Tickets
-
-
-
-| Method | Endpoint | Description |
-
-|---|---|---|
-
-| GET | `/api/tickets` | Retrieve all tickets |
-
-| GET | `/api/tickets/<ticket\_id>` | Retrieve a specific ticket |
-
-| POST | `/api/tickets` | Create a new ticket |
-
-| PUT | `/api/tickets/<ticket\_id>` | Update ticket status or add notes |
-
-| DELETE | `/api/tickets/<ticket\_id>` | Delete a ticket |
-
-
-
-\### Example Ticket
-
-
+### Example Ticket
 
 ```json
-
 {
-
-&#x20; "customer\_name": "rahul",
-
-&#x20; "customer\_email": "rahul@gmail.com",
-
-&#x20; "subject": "Unable to login",
-
-&#x20; "description": "Customer is unable to access their account."
-
+  "ticket_id": "TKT-001",
+  "customer_name": "Customer Name",
+  "customer_email": "customer@example.com",
+  "subject": "Unable to login",
+  "description": "Customer is unable to access the account.",
+  "status": "Open"
 }
-
 ```
 
+---
 
+# 🗄️ Database Design
 
-\## 🗄️ Database
+The application uses two related PostgreSQL tables.
 
+### `tickets`
 
-
-The application uses PostgreSQL through Supabase.
-
-
-
-\### Main tables
-
-
-
-\*\*tickets\*\*
-
-\- ticket\_id
-
-\- customer\_name
-
-\- customer\_email
-
-\- subject
-
-\- description
-
-\- status
-
-\- created\_at
-
-\- updated\_at
-
-
-
-\*\*notes\*\*
-
-\- id
-
-\- ticket\_id
-
-\- note\_text
-
-\- created\_at
-
-
-
-\## 💻 Running Locally
-
-
-
-\### 1. Clone the repository
-
-
-
-```bash
-
-git clone https://github.com/Shridhanya77/datastraw\_support\_crm.git
-
-cd datastraw\_support\_crm
-
+```text
+┌─────────────────────────────────┐
+│             tickets              │
+├─────────────────────────────────┤
+│ id                              │
+│ ticket_id                       │
+│ customer_name                   │
+│ customer_email                  │
+│ subject                         │
+│ description                     │
+│ status                          │
+│ created_at                      │
+│ updated_at                      │
+└─────────────────────────────────┘
 ```
 
+### `notes`
 
+```text
+┌──────────────────────────────┐
+│            notes             │
+├──────────────────────────────┤
+│ id                           │
+│ ticket_id                    │
+│ note_text                    │
+│ created_at                   │
+└──────────────────────────────┘
+```
 
-\### 2. Run the backend
+Each note is associated with its corresponding support ticket.
 
+---
 
+# 📂 Project Structure
+
+```text
+datastraw_support_crm/
+│
+├── 📁 backend/
+│   ├── app.py
+│   ├── database.py
+│   └── requirements.txt
+│
+├── 📁 frontend/
+│   ├── 📁 src/
+│   │   ├── App.jsx
+│   │   ├── CreateTicket.jsx
+│   │   ├── TicketDetails.jsx
+│   │   └── services/
+│   │       └── api.js
+│   │
+│   ├── package.json
+│   └── vite.config.js
+│
+├── 📁 Screenshots/
+│   ├── dashboard.png
+│   ├── create-ticket.png
+│   └── ticket-details.png
+│
+├── .env.example
+├── .gitignore
+└── README.md
+```
+
+---
+
+# 🚀 Running the Project Locally
+
+## 1️⃣ Clone the repository
 
 ```bash
+git clone https://github.com/Shridhanya77/datastraw_support_crm.git
 
+cd datastraw_support_crm
+```
+
+---
+
+## 2️⃣ Start the Backend
+
+```bash
 cd backend
 
-
-
 python -m venv venv
-
 ```
 
-
-
-Activate the virtual environment.
-
-
-
-\*\*Windows PowerShell:\*\*
-
-
+### Windows PowerShell
 
 ```powershell
-
-.\\venv\\Scripts\\Activate.ps1
-
+.\venv\Scripts\Activate.ps1
 ```
-
-
 
 Install dependencies:
 
-
-
 ```bash
-
 pip install -r requirements.txt
-
 ```
 
-
-
-Run Flask:
-
-
+Start Flask:
 
 ```bash
-
 python app.py
-
 ```
 
-
-
-The backend will run at:
-
-
+Backend will run at:
 
 ```text
-
 http://127.0.0.1:5000
-
 ```
 
+---
 
-
-\### 3. Run the frontend
-
-
+## 3️⃣ Start the Frontend
 
 Open another terminal:
 
+```bash
+cd frontend
+```
 
+Install dependencies:
 
 ```bash
-
-cd frontend
-
 npm install
-
-npm run dev
-
 ```
 
+Start Vite:
 
+```bash
+npm run dev
+```
 
-The frontend will run at the Vite development URL shown in the terminal.
+The frontend will be available at the local Vite URL shown in the terminal.
 
+---
 
+# 🔐 Environment Variables
 
-\## 🔐 Environment Variables
-
-
-
-For production, the backend uses:
-
-
+For local PostgreSQL configuration, create a `.env` file and provide:
 
 ```text
-
-DATABASE\_URL
-
+DATABASE_URL=your_database_connection_string
 ```
 
+⚠️ **Never commit your real database connection string or credentials to GitHub.**
 
+A safe template is provided in:
 
-The database connection string should be configured through the deployment platform and should \*\*not\*\* be committed to GitHub.
+```text
+.env.example
+```
 
+---
 
+# 🧪 Tested Functionality
 
-\## 🎯 Learning Outcomes
+The deployed application has been tested for the major CRM workflows:
 
+- ✅ Create support ticket
+- ✅ Automatic ticket ID generation
+- ✅ Ticket listing
+- ✅ Ticket details
+- ✅ Search tickets
+- ✅ Filter by status
+- ✅ Update ticket status
+- ✅ Add ticket notes
+- ✅ Persist notes after refresh
+- ✅ Delete tickets
+- ✅ Dashboard statistics
+- ✅ PostgreSQL persistence
+- ✅ Production frontend/backend communication
 
+---
 
-This project provided practical experience with:
+# 🎯 Key Implementation Highlights
 
+### 1. Full-Stack Integration
 
+The application connects a React frontend with a Flask REST API and PostgreSQL database.
 
-\- Full-stack web application development
+### 2. RESTful API Design
 
-\- React component-based development
+Separate API endpoints handle ticket creation, retrieval, updating and deletion.
 
-\- REST API development using Flask
+### 3. Search & Filtering
 
-\- PostgreSQL database integration
+Users can quickly find tickets using customer information, ticket IDs, descriptions and subjects.
 
-\- CRUD operations
+### 4. Persistent Data
 
-\- Frontend-backend communication
+Ticket and note information is stored in PostgreSQL through Supabase rather than browser-only storage.
 
-\- API error handling
+### 5. Production Deployment
 
-\- Git and GitHub
+The application is deployed using:
 
-\- Production deployment
+```text
+GitHub
+   │
+   ├── Frontend → Vercel
+   │
+   └── Backend  → Render
+                    │
+                    ▼
+                 Supabase
+                 PostgreSQL
+```
 
-\- Cloud database integration
+---
 
-\- Debugging deployment issues
+# 📚 What I Learned
 
+Through this project, I gained practical experience in:
 
+- Full-stack web application development
+- React component-based architecture
+- Flask REST API development
+- PostgreSQL database integration
+- CRUD operations
+- Frontend-backend communication
+- Cloud deployment
+- Environment variable management
+- Git and GitHub workflows
+- Debugging production deployment issues
 
-\## 👩‍💻 Author
+---
 
+# 🔮 Future Improvements
 
+Possible future enhancements include:
 
-\*\*Shridhanya\*\*
+- 🔐 User authentication and role-based access
+- 📧 Email notifications for ticket updates
+- 📎 File attachments
+- 📈 Advanced analytics and reporting
+- 👥 Customer and support-agent management
+- 🔔 Real-time ticket notifications
+- 🤖 AI-assisted ticket classification and response suggestions
 
+---
 
+# 👩‍💻 Author
 
-B.E. Computer Science Engineering  
+## Shridhanya S.
 
-IoT, Cybersecurity \& Blockchain Technology
+**B.E. Computer Science Engineering**
 
+Interested in:
 
+`Full-Stack Development` · `Python` · `AI/ML` · `Data Science` · `Cybersecurity`
 
-GitHub:  
+### 🔗 Connect
 
+**GitHub:**  
 https://github.com/Shridhanya77
 
+---
 
+<div align="center">
 
-\---
+### ⭐ If you find this project interesting, consider giving it a star!
 
+**Built with React.js • Flask • PostgreSQL • Supabase**
 
-
+</div>
