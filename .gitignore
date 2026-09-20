@@ -12,6 +12,7 @@ backend/crm.db
 # Environment variables
 .env
 .env.*
+!.env.example
 
 # Node
 frontend/node_modules/
